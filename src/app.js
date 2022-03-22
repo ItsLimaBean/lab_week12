@@ -5,16 +5,20 @@ function selectSidebar() {
     console.log(sideNav)
 }
 
+function getGradesAverage(grades) {
+    let gradesTotal = 0
+    for (let grade of grades) {
+        gradesTotal += grade
+    }
+
+    return gradesTotal / student.grades.length
+}
+
 function getStudentsAverage(students) {
     const studentsScholarship = []
     
     for (let student of students) {
-        let gradesTotal = 0
-        for (let grade of student.grades) {
-            gradesTotal += grade
-        }
-    
-        let average = gradesTotal / student.grades.length
+        let average = getGradesAverage(student.grades)
         if (average > 80.0) {
             studentsScholarship.push({ name: student.name, gradeAvg: average })
         }

@@ -23,6 +23,13 @@ function getStudentsAverage(students) {
     return studentsScholarship
 }
 
+function applyDarkTheme() {
+    let pageContainer = document.querySelector(".container")
+    pageContainer.classList.replace("light-theme", "dark-theme")
+}
+
+applyDarkTheme()
+
 const students = [
     { name: "Tasha", grades: [ 80, 67, 75, 62 ] },
     { name: "Tuvok", grades: [ 90, 88, 91, 92 ] },
